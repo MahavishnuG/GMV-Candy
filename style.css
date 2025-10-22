@@ -1,0 +1,21 @@
+*{box-sizing:border-box;font-family:Inter, system-ui, Arial, sans-serif}
+body{margin:0;background:linear-gradient(#fff7fb,#fff);min-height:100vh;display:flex;align-items:center;justify-content:center}
+#app{width:100%;max-width:720px;padding:12px}
+header{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+h1{margin:0;font-size:1.4rem;color:#7b2cff}
+.scoreboard{display:flex;gap:10px;align-items:center}
+.scoreboard div{background:#fff;padding:8px 10px;border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,0.06)}
+#restart{padding:8px 10px;border-radius:8px;border:none;background:#7b2cff;color:#fff}
+main{position:relative}
+#board{display:grid;grid-template-columns: repeat(8, 64px);grid-auto-rows:64px;gap:8px;background:linear-gradient(#fff,#ffeef5);padding:12px;border-radius:12px;box-shadow:0 8px 20px rgba(0,0,0,0.06)}
+.cell{width:64px;height:64px;border-radius:10px;display:flex;align-items:center;justify-content:center;cursor:pointer;user-select:none;transition:transform .12s ease}
+.cell.selected{transform:scale(1.05);box-shadow:0 6px 14px rgba(0,0,0,0.12)}
+.cell img{width:56px;height:56px;pointer-events:none}
+#overlay{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.35);z-index:10}
+.hidden{display:none}
+#popup{background:#fff;padding:16px;border-radius:12px;min-width:240px;text-align:center;box-shadow:0 10px 30px rgba(0,0,0,0.16)}
+@media (max-width:640px){
+  #board{grid-template-columns:repeat(8,44px);grid-auto-rows:44px;gap:6px;padding:8px}
+  .cell{width:44px;height:44px;border-radius:8px}
+  .cell img{width:36px;height:36px}
+}

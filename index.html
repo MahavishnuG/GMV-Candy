@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CandyPop — Fixed</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>CandyPop 🍬</h1>
+      <div class="scoreboard">
+        <div>Score: <span id="score">0</span></div>
+        <div>Moves: <span id="moves">0</span></div>
+        <button id="restart">Restart</button>
+      </div>
+    </header>
+    <main>
+      <div id="board"></div>
+      <div id="overlay" class="hidden">
+        <div id="popup">
+          <h2 id="popup-title">Nice!</h2>
+          <p id="popup-msg">You matched 3 candies.</p>
+          <button id="popup-ok">OK</button>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <audio id="bg-music" loop></audio>
+  <audio id="sound-0"></audio>
+  <audio id="sound-1"></audio>
+  <audio id="sound-2"></audio>
+  <audio id="sound-3"></audio>
+  <audio id="sound-4"></audio>
+
+  <script src="app_fixed.js"></script>
+</body>
+</html>
